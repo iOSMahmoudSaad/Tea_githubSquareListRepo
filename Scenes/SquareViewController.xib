@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SquareViewController" customModule="Tea_githubSquareListRepo" customModuleProvider="target">
             <connections>
+                <outlet property="squaresTableView" destination="f42-HZ-eLL" id="q8h-WD-zwc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
