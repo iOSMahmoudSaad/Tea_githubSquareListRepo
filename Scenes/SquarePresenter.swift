@@ -29,7 +29,10 @@ class SquarePresenter {
     //MARK: - Public funcs
     
     func getSquares(){
+        
+        self.view?.startLoading()
         APIService.sharedService.getSquareRepso { (squares :[Square]? , error) in
+            self.view?.endLoading()
             guard let squares = squares else {
                 return
             }
@@ -41,6 +44,7 @@ class SquarePresenter {
             }
             
             DispatchQueue.main.async { [weak self] in
+                
                 self?.view?.reloadSquareTableView()
                 
             }
